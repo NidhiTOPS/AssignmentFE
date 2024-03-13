@@ -1,0 +1,92 @@
+ques:1:What is JavaScript. How to use it?
+Ans:-JavaScript is the Programming Language for the Web.
+-JavaScript can update and change both HTML and CSS.
+-JavaScript can calculate, manipulate and validate data.
+
+Example:
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
+
+function updateName() {
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+}
+
+Ques:2:How many type of Variable in JavaScript?
+Ans:=> there are majorly # types of Variable and Automatically is Consider As var that also Present
+Automatically
+Using var
+Using let
+Using const
+
+
+Ques:3:Define a Data Types in js?
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object(non-primitive:notPre-difine);
+
+JavaScript includes primitive and non-primitive data types. The primitive data types in JavaScript include string, number, boolean, undefined, null, and symbol. The non-primitive data type includes the object.
+
+Ques:4:Write a mul Function Which will Work Properly When invoked With Following Syntax.
+Ans:The MUL function is a miniature of the multiplication function.
+function mul(x) {
+  return function (y) {
+    return function (z) {
+      return x * y * z;
+    };
+  };
+}
+
+in above Function,
+we call the function that required an argument as a first number, and that function calls another function that required another argument and this step goes on. 
+// Ques.5  //
+What the deference between undefined and undeclare in JavaScript?
+Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined is not a keyword. 
+
+Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the var or const keyword.
+
+Example:
+<script>
+      // let x;
+      function NG() {
+      let x;
+        console.log(x);
+      }
+
+      NG();
+       </script>
+
+Ques:6:Q.6 Using console.log() print out the following statement: The quote 'There is no exercise
+better for the heart than reaching down and lifting people up.' by John Holmes teaches us to
+help one another.
+
+Ans: console.log("There is no exercise
+better for the heart than reaching down and lifting people up.");
+
+Ques.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?
+var stringNumber = '10';
+var number = 10;
+
+console.log(typeof number === typeof stringNumber);
+
+Ques:8:Q.8 Write a JavaScript Program to find the area of a triangle?
+
+<script>
+let baseSide = 10;
+let heightSide = 5;
+
+function triangleArea(base,height){
+return 0.5*base*height;
+}
+
+let area = triangleArea(baseSide,heightSide);
+console.log(`The area of the triangle is: ${area}`);
+
+</script>
+

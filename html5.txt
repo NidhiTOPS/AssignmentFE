@@ -1,0 +1,88 @@
+Ques:1:What are the new tags added in HTML5?
+Ans:In Html5 List of new semantic elements
+The semantic elements added in HTML5 are:
+
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+
+It has greater accessibility. You are not the only one that finds semantic elements easier to understand. Search engines and assistive technologies (like screen readers for users with a sight impairment) are also able to better understand the context and content of your website, meaning a better experience for your users.
+
+
+Ques:2:How to embed audio and video in a webpage?
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <video src="rabbit320.webm" controls>
+      <p>
+        Your browser doesn't support HTML video. Here is a
+        <a href="rabbit320.webm">link to the video</a> instead.
+      </p>
+    </video> -->
+    <figure>
+      <figcaption>Listen to the T-Rex:</figcaption>
+      <audio controls src="/media/cc0-audio/t-rex-roar.mp3"></audio>
+      <a href="/media/cc0-audio/t-rex-roar.mp3">Download audio</a>
+    </figure>
+
+    <audio src="AudioTest.ogg" autoplay>
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
+</audio>
+  </body>
+</html>
+
+Ques:3:What are Semantic Elements?
+Ans::There Are the Some tag
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+
+
+Ques:4:Canvas and SVG tags?
+
+<canvas id="myCanvas" width="100" height="300" style="border:1px solid #000000;">
+Example:
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+Sorry, your browser does not support inline SVG.
+</svg>
+
+</body>
+</html>
+
+
+
+
+
+
+
