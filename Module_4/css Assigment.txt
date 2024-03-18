@@ -1,0 +1,307 @@
+Ques:1:what are the benefit of Css?
+CSS stands for cascading style sheets. In short, 
+CSS is a design language that makes a website look more appealing than
+just plain or uninspiring pieces of text. Whereas HTML largely determines textual content, 
+CSS determines visual structure, layout, and aesthetics. HTML is a markup language, 
+and CSS is a style sheet language.Think “look and feel” when you think CSS.
+Modifying the appearance of a website is more straightforward with CSS. You can quickly 
+make changes to fonts, colors, and layouts by updating a few lines of code in the CSS file,
+rather than manually editing each HTML element.
+
+1. Separation of Content and Style
+One of the most significant advantages of CSS is its ability to separate content from presentation. This separation enhances the maintainability of web pages as changes to the styling can be made without altering the underlying HTML structure. This also promotes a cleaner, more organized codebase.
+
+2. Consistency
+CSS enables consistent styling across an entire website or multiple pages. This is one of the many advantages of using CSS. By creating a single external CSS file and linking it to multiple web pages, you ensure a uniform look and feel. This reduces redundancy and makes it easier to update styling elements globally.
+
+3. Faster Loading Times
+External CSS files can be cached by web browsers, allowing them to load faster on subsequent visits. This results in a better user experience, especially for returning visitors.
+
+4. Responsive Design
+With CSS, you can create responsive web designs that adapt to different screen sizes and devices. This is another main one among advantages of cascading style sheets. This is crucial in the era of mobile browsing, as it ensures your website looks and functions well on various platforms.
+
+/////////////////////////////////////////////////////////////////
+
+Ques:2:what are the Disadvantages of Css?
+
+Disadvantages of CSS
+Now that we've explored what are the advantages of CSS, let us take a look at what are the disadvantages of CSS.
+
+1. Browser Compatibility
+CSS may render differently in various web browsers, leading to inconsistencies in the visual presentation. Developers often need to write browser-specific CSS code or use vendor prefixes to ensure compatibility.
+
+2. Learning Curve
+One among the main disadvantages of cascading style sheets is that while it is essential
+for web development, it can be complex, especially for beginners. Mastering CSS requires
+understanding selectors, properties, values, and the box model, which can be overwhelming.
+
+3. Lack of Security
+CSS itself does not offer security features, and it can be vulnerable to attacks like
+ Cross-Site Scripting (XSS) when used inappropriately. Developers must be cautious when
+  implementing CSS to prevent security risks.
+
+4. Limited Layout Control
+CSS has limitations when it comes to controlling complex layouts. Achieving specific layouts, such as equal-height columns, can be challenging without resorting to workarounds or additional technologies like Flexbox or Grid.
+
+5. Performance Impact
+Extensive or poorly optimized CSS files can slow down page load times. It's essential to minimize and optimize CSS to maintain optimal website performance.
+
+6. Overriding Styles
+The "cascading" nature of CSS can sometimes lead to unexpected styling conflicts. Specificity and the order in which styles are applied can result in unintended consequences.
+
+7. Maintenance Challenges
+As websites grow and evolve, maintaining and refactoring CSS can become complex and time-consuming. It's crucial to follow best practices and use naming conventions to keep styles manageable.
+
+While there are advantages to using inline CSS, such as the ability to apply unique styles to individual elements directly within the HTML, it's essential to strike a balance and consider the trade-offs in terms of code maintainability and efficiency. However, it's equally important to recognize the disadvantages of inline CSS, which can clutter your HTML code, make updates less efficient, and hinder the overall readability and maintainability of your web pages.
+
+
+Ques:3:what are the different in Css2 And CSS3?
+CSS was originally released in 1996 and consists of properties for adding font properties such as typeface and emphasis color of text, backgrounds, and other elements. CSS2 was released in 1998 with added styles for other media types so that it can be used for page layout designing. CSS3 was released in 1999 and presentation-style properties were added in it that allows you to build a presentation from documents.
+
+
+CSS was originally released in 1996 and consists of properties for adding font properties such as typeface and emphasis color of text, backgrounds, and other elements. CSS2 was released in 1998 with added styles for other media types so that it can be used for page layout designing. CSS3 was released in 1999 and presentation-style properties were added in it that allows you to build a presentation from documents.
+Unlike CSS2, which was comprised of a single document, CSS3 has its specifications divided into many individual modules, which makes CSS3 a whole lot easier to handle.
+With CSS3, the designers can now use special fonts, like those available in Google Fonts and Typecast. Earlier, with CSS and CSS2, designers could only use “web-safe fonts” for being 100% sure to use fonts that would always display the same on every machine.
+While CSS and CSS2 had ‘simple selectors’, CSS3 calls the components as ‘a sequence of simple selectors’.
+CSS3 came up with some key web design considerations like rounded borders that help in rounding up the borders without any hassle. This turned out to be a huge plus point for developers who were struggling with initial versions of CSS borders.
+CSS3 has the capability to split text sections into multiple columns so that it can be read like a newspaper. In CSS2, the developers had difficulty because the standard was not equipped with automatically breaking the text so that it fits within a box.
+
+/// 
+
+//
+Ques:4: CSS opacity?
+
+The opacity CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
+Example:
+opacity: 0;
+opacity: 0.33;
+
+Code Example:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+</style>
+</head>
+<body>
+
+<h1>Image Transparency</h1>
+<p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC7_f7CRz3LLm3t39qFtjI7zyUoe0j-ubIQSNEMi_a2rmzvMUAvj24tC4sfViPE7OP6YY&usqp=CAU" alt="Forest" width="170" height="100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC7_f7CRz3LLm3t39qFtjI7zyUoe0j-ubIQSNEMi_a2rmzvMUAvj24tC4sfViPE7OP6YY&usqp=CAU" alt="Mountains" width="170" height="100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC7_f7CRz3LLm3t39qFtjI7zyUoe0j-ubIQSNEMi_a2rmzvMUAvj24tC4sfViPE7OP6YY&usqp=CAU" alt="Italy" width="170" height="100">
+
+</body>
+</html>
+
+
+Ques:5:How can the background color of an element be changed?
+Using "background-color Propertey
+Example : "background-color:#33475b;
+
+Ques:6:How can image repetition of the backup be controlled?
+Using, background-repeat property
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHH8mepO4avVq5NJFuruMoqN02xAqm5Jk7IryH9iVuNw&s");
+  background-repeat: repeat-y;
+  background-repeat: repeat-x;
+  background-repeat: repeat;
+  background-repeat: space;
+  background-repeat: round;
+}
+</style>
+</head>
+<body>
+
+<h1>The background-repeat Property</h1>
+<p>Here, the background image is repeated only vertically.</p>
+</body>
+</html>
+
+Ques:7:What is the use of the background-position property?
+
+=> The background-position CSS property sets the initial position for each background image.The position is relative to the position layer set by background-origin.
+
+Example:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { 
+  background-image: url('w3css.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+</style>
+</head>
+<body>
+
+<h1>The background-position Property</h1>
+<p>Here, the background image will be positioned in the center of the element (in this case, the body element).</p>
+
+</body>
+</html>
+
+Ques:8:Which property controls the image scroll in the background?
+Using  background-attachment: fixed;
+
+Ques:9:Why should background and color be used as separate properties?
+Backgrounds may be colors or images. Background properties allow authors to position a background image, repeat it, and declare whether it should be fixed with respect to the viewport or scrolled along with the document.
+
+
+Ques:10:How to center block elements using CSS1?
+Ans:1. By setting the properties margin-left and margin-right to auto and width to some  value;
+
+ques:11:What are the ways to integrate CSS as a web page?
+Ans:Inline - by using the style attribute inside HTML elements.
+Internal - by using a <style> element in the <head> section.
+External - by using a <link> element to link to an external CSS file.
+
+Ques:12:What is embedded style sheets?
+Ans:An embedded style sheet is declared within the <head> element of an XHTML document. It applies to the whole document, rather than just one element. Each style declaration (or CSS rule) gets applied to everything in the document that matches that rule
+ Internal style sheet is also knownas embedded style sheets.
+
+ Ques:What are the advantages and disadvantages of using external style sheets in css?:What are the external style sheets?
+ Ans:An external style sheet is a separate CSS file that can be accessed by creating a link within the head section of the webpage. Multiple webpages can use the same link to access the stylesheet. The link to an external style sheet is placed within the head section of the page.
+
+
+ Ques:14:What are the advantages and disadvantages of using external style sheets in css?
+ Ans: Some of its primary advantages are increased website speed, time efficiency, flexibility, consistency, etc.
+
+ Ques:15:What is the meaning of the CSS selector?
+Ans:A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them.
+
+Ques:16:What are the media types allowed by CSS?
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+width and height of the viewport
+width and height of the device
+
+Ques:17:What is the rule set?
+A CSS ruleset is various affirmations to various pieces or elements of the document. The objective is to apply a bunch of properties for certain distinct qualities to a solitary, or a particular arrangement of components in the connected HTML page.
+
+
+// task
+
+Ques:18:Create image gallery using display grid with responsive?
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0" style="width:100%">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0" style="width:100%">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0"  style="width:100%">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0" style="width:100%">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0"  style="width:100%">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0" style="width:100%">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+  </div>  
+  <div class="column">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+  </div>
+  <div class="column">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+    <img src="https://repository-images.githubusercontent.com/260096455/47f1b200-8b2e-11ea-8fa1-ab106189aeb0">
+  </div>
+</div>
+
+</body>
+</html> 
