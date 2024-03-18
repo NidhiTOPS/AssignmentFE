@@ -90,3 +90,1326 @@ console.log(`The area of the triangle is: ${area}`);
 
 </script>
 
+
+Ques:9:Write a JavaScript program to calculate days left until next Christmas?
+let today = new Date();
+let christmasYear = today.getFullYear();
+
+if (today.getMonth() == 11 && today.getDate() > 25) {
+  christmasYear = christmasYear + 1;
+}
+
+let christmasDate = new Date(christmasYear, 11, 25);
+let dayMilliseconds = 1000 * 60 * 60 * 24;
+
+let remainingDays = Math.ceil(
+  (christmasDate.getTime() - today.getTime()) /
+   (dayMilliseconds)
+);
+
+Ques:10:Conditional statements are used to perform different actions based on different conditions.
+Ans:when you write code, you want to perform different actions for different decisions.
+You can use conditional statements in your code to do this.
+In JavaScript we have the following conditional statements:
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+//
+Ques.11 Find circumference of Rectangle formula : C = 4 * a ?
+Ans:
+<script>
+function Circumference(a) 
+{ 
+    return 4 * a; 
+}
+  let a = 5; 
+    document.write("Circumference of"
+        +" a square is "
+        +Circumference(a));
+</script>
+
+Q.12 WAP to convert years into days and days into years?
+<script> 
+	let DAYS_IN_WEEK = 7; 
+
+	// Function to find year, week, days 
+	function find(number_of_days) { 
+		let year, week, days; 
+
+		// Assume that years 
+		// is of 365 days 
+		year = parseInt(number_of_days / 365); 
+		week = parseInt((number_of_days % 365) / DAYS_IN_WEEK); 
+		days = (number_of_days % 365) % DAYS_IN_WEEK; 
+
+		document.write("years = " + year + "<br/>"); 
+		document.write("weeks = " + week + "<br/>"); 
+		document.write("days = " + days + "<br/>"); 
+	} 
+
+	// Driver Code 	
+		let number_of_days = 200; 
+		find(number_of_days); 
+
+</script> 
+
+
+//Ques:13: Convert temperature Fahrenheit to Celsius? (Conditional logic Question)?
+
+function cToF(celsius) 
+{
+  var cTemp = celsius;
+  var cToFahr = cTemp * 9 / 5 + 32;
+  var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+    console.log(message);
+}
+
+function fToC(fahrenheit) 
+{
+  var fTemp = fahrenheit;
+  var fToCel = (fTemp - 32) * 5 / 9;
+  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+    console.log(message);
+} 
+cToF(60);
+fToC(45);
+//
+Q.14 Write a JavaScript exercise to get the extension of a filename.?
+Ans:
+=>1.Using split() and pop()
+function getFileExtension(filename){
+
+    // get file extension
+    const extension = filename.split('.').pop();
+    return extension;
+}
+
+// passing the filename
+const result1 = getFileExtension('module.js');
+console.log(result1);
+
+const result2 = getFileExtension('module.txt');
+console.log(result2);
+
+=>2.Using substring() and lastIndexOf()
+function getFileExtension(filename){
+    // get file extension
+    const extension = filename.substring(filename.lastIndexOf('.') + 1, filename.length);
+    return extension;
+}
+
+const result1 = getFileExtension('module.js');
+console.log(result1);
+
+const result2 = getFileExtension('test.txt');
+console.log(result2);
+//
+Q.15 What is the result of the expression (5 > 3 && 2 < 4)?
+Ans:true;
+//
+Q.16 What is the result of the expression (true && 1 && "hello")?
+Ans:
+
+Q.17 What is the result of the expression true && false || false && true?
+Ans:
+
+Q.18 What is a Loop and Switch Case in JavaScript define that?
+Ans:
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+If there is no match, the default code block is executed.
+
+Ques:19:Q.19 What is the use of is NaN function?
+The isNaN() function in JavaScript is used to determine whether a value is NaN (Not a Number) or not. NaN is a special value that represents the result of an operation that cannot produce a meaningful result according to the IEEE floating-point standard.
+Example:
+isNaN(123);      // false, 123 is a number
+isNaN('Hello');  // true, 'Hello' cannot be converted into a number
+
+//Q.20 What is the difference between && and || in JavaScript?
+Ans:
+    && (Logical AND):
+        The && operator returns true if both operands are true, otherwise, it returns false.
+        If the first operand evaluates to false, the second operand is not evaluated because the result will always be false.
+        Example: true && true returns true, true && false returns false, false && true returns false, and false && false returns false.
+
+    || (Logical OR):
+        The || operator returns true if at least one of the operands is true, otherwise, it returns false.
+        If the first operand evaluates to true, the second operand is not evaluated because the result will always be true.
+        Example: true || true returns true, true || false returns true, false || true returns true, and false || false returns false.
+
+//Q.21 What is the use of Void (0)?
+Ans:
+void(0) is a unary operator that takes a single operand and evaluates it and then returns undefined. It's typically used in situations where you want to explicitly return undefined, often in conjunction with anchor tags (<a> elements) in HTML.
+
+The primary use of void(0) is to create "void" links in HTML, which are essentially links that do nothing when clicked. Historically, this technique was used to prevent the browser from navigating away from the current page when a link was clicked.
+For example:<a href="javascript:void(0)">Click me</a>
+clicking the "Click me" link won't trigger any navigation because void(0) returns undefined, essentially cancelling the default behavior of the anchor tag.
+
+It's important to note that with modern JavaScript and better practices, the use of void(0) for this purpose is considered somewhat outdated. Instead, event handlers or href="#" are often used in such cases, and more complex interactions are typically handled with JavaScript frameworks or libraries like React or Vue.js.
+
+Q.22 Check Number Is Positive or Negative in JavaScript?
+
+Ans:function checkNumber(num){
+    if (num > 0) {
+        console.log("The number is positive.");
+    } else if(num < 0) {
+        console.log("The number is negative.");
+    } else {
+        console.log("The number is zero.");
+    }
+}
+
+checkNumber(5);  
+checkNumber(-3);  
+checkNumber(0);
+
+Q.23 Find the Character Is Vowel or Not?
+you can create a function that checks if the character is one of the vowels (a, e, i, o, u or their uppercase variants)
+Example:
+function isVowel(char){
+   
+    char = char.toLowerCase();
+
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u'){
+        return true;
+    } else {
+        return false;
+    }
+}
+// Test cases:
+console.log(isVowel('a')); // Output: true
+console.log(isVowel('E')); // Output: true
+
+Q.24 Write to check whether a number is negative, positive or zero?
+function checkNumber(num) {
+    if (num > 0) {
+        return "Positive";
+    } else if (num < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
+// Test cases
+console.log(checkNumber(5));   // Output: Positive
+console.log(checkNumber(-3));  // Output: Negative
+console.log(checkNumber(0));   // Output: Zero
+Q.25 Write to find number is even or odd using ternary operator in JS?
+Ans:const number = 10;
+const result = number % 2 === 0 ? "Even" : "Odd";
+console.log(result); // Output: Even
+
+
+Q.26 Write find maximum number among 3 numbers using ternary operator in JS?
+Ans:const num1 = 10;
+const num2 = 20;
+const num3 = 15;
+
+const max = num1 >= num2 ? (num1 >= num3 ? num1 : num3) : (num2 >= num3 ? num2 : num3);
+console.log("The maximum number is: " + max);
+
+const num1 = 10;
+const num2 = 20;
+const num3 = 15;
+
+Q.27 Write to find minimum number among 3 numbers using ternary operator in JS?
+const min = num1 <= num2 ? (num1 <= num3 ? num1 : num3) : (num2 <= num3 ? num2 : num3);
+console.log("The minimum number is: " + min);
+
+
+Q.28 Write to find the largest of three numbers in JS?
+function findLargest(num1, num2, num3) {
+    let largest = num1; // Assume num1 is the largest initially
+
+    // Compare num2 with largest
+    if (num2 > largest) {
+        largest = num2;
+    }
+
+    // Compare num3 with largest
+    if (num3 > largest) {
+        largest = num3;
+    }
+
+    return largest;
+}
+
+const num1 = 10;
+const num2 = 20;
+const num3 = 15;
+
+const largestNumber = findLargest(num1, num2, num3);
+console.log("The largest number is: " + largestNumber);
+
+Ques.29 Write to show:
+i)Monday to Sunday using switch case in JS?
+
+let day = 3; // Change this value to display different days
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+
+ii)Vowel or Consonant using switch case in JS?
+Example:
+let char = 'a'; // Change this value to test different characters
+
+switch (char.toLowerCase()) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+        console.log(char + " is a vowel");
+        break;
+    default:
+        console.log(char + " is a consonant");
+}
+
+Q.30 What are the looping structures in JavaScript? Any one Example?
+for loop: Executes a block of code repeatedly until a specified condition evaluates to false. It consists of three parts: initialization, condition, and iteration.
+Example:for (let i = 0; i < 5; i++) {
+    console.log("Iteration " + (i + 1));
+}
+while loop: Executes a block of code as long as the specified condition evaluates to true.
+Example:
+let i = 0;
+while (i < 5) {
+    console.log("Iteration " + (i + 1));
+    i++;
+}
+do...while loop: Similar to the while loop, but the block of code is executed once before the condition is checked.
+Example:
+let i = 0;
+do {
+    console.log("Iteration " + (i + 1));
+    i++;
+} while (i < 5);
+for...in loop: Iterates over the enumerable properties of an object.
+const obj = { a: 1, b: 2, c: 3 };
+for (let prop in obj) {
+    console.log(prop + ": " + obj[prop]);
+}
+for...of loop: Iterates over iterable objects like arrays, strings, etc.
+const arr = [1, 2, 3, 4, 5];
+for (let num of arr) {
+    console.log(num);
+}
+
+Q.31 Write a print 972 to 897 using for loop in JS?
+for (let i = 972; i >= 897; i--) {
+    console.log(i);
+}
+
+Q.32 Write to print factorial of given number?
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1; // Factorial of 0 and 1 is 1
+    } else {
+        let result = 1;
+        for (let i = 2; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+}
+
+const number = 5;
+console.log("Factorial of " + number + " is: " + factorial(number));
+
+Q.33 Write to print Fibonacci series up to given numbers?
+
+function fibonacciSeries(limit) {
+    let fib = [];
+    fib[0] = 0;
+    fib[1] = 1;
+
+    for (let i = 2; fib[i - 1] + fib[i - 2] <= limit; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    return fib;
+}
+
+const limit = 50;
+const series = fibonacciSeries(limit);
+console.log("Fibonacci series up to " + limit + ": " + series.join(", "));
+
+Q.34 Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?
+function reverseNumber(number) {
+    const reversedString = String(number).split('').reverse().join('');
+    return parseInt(reversedString, 10);
+}
+
+const number = 64728;
+const reversed = reverseNumber(number);
+console.log("Original number: " + number);
+console.log("Reversed number: " + reversed);
+
+Q.35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?
+function sumDigits(number) {
+    let sum = 0;
+    const digits = Math.abs(number).toString(); // Convert number to string to iterate over its digits
+
+    for (let i = 0; i < digits.length; i++) {
+        sum += parseInt(digits[i], 10); // Convert each digit back to a number and add it to sum
+    }
+
+    return sum;
+}
+
+const number = 1523;
+const summation = sumDigits(number);
+console.log("Summation of digits of " + number + " is: " + summation);
+
+Q.36 Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -
+5) in JS?
+
+Ans:function sumFirstAndLastDigit(number) {
+    const stringNum = String(number);
+    const firstDigit = parseInt(stringNum.charAt(0));
+    const lastDigit = parseInt(stringNum.charAt(stringNum.length - 1));
+
+    return firstDigit + lastDigit;
+}
+
+
+const number = 1234;
+const sum = sumFirstAndLastDigit(number);
+console.log("Sum of first and last digit of " + number + ": " + sum);
+
+Q.37 Use console.log() and escape characters to print the following pattern in JS?
+1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125
+Ans:
+for (let i = 1; i <= 5; i++) {
+    let line = "";
+    for (let j = 1; j <= 5; j++) {
+        if (j === 1) {
+            line += i + " ";
+        } else {
+            line += Math.pow(i, j) + " ";
+        }
+    }
+    console.log(line);
+}
+
+Q.38 Use pattern in console.log in JS?
+1) 1
+1 0
+1 0 1
+1 0 1 0
+1 0 1 0 1
+
+Ans:
+for (let i = 1; i <= 5; i++) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+        if (j % 2 === 0) {
+            line += "0 ";
+        } else {
+            line += "1 ";
+        }
+    }
+    console.log(line);
+}
+2)
+A
+B C
+D E F
+G H I J
+K L M N O
+Ans:::
+let charCode = 65; // ASCII code for 'A'
+
+for (let i = 1; i <= 5; i++) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+        line += String.fromCharCode(charCode) + " ";
+        charCode++;
+    }
+    console.log(line);
+}
+
+3)
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+Ans:::
+let count = 1;
+
+for (let i = 1; i <= 5; i++) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+        line += count + " ";
+        count++;
+    }
+    console.log(line);
+}
+
+4)
+*
+* *
+* * *
+* * * *
+* * * * *
+Ans:::
+for (let i = 1; i <= 5; i++) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+        line += "* ";
+    }
+    console.log(line);
+}
+
+Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome?
+Ans:::
+// Function to check if a number is a palindrome
+function isPalindrome(num) {
+    // Convert the number to a string
+    let numStr = num.toString();
+    // Check if the string is equal to its reverse
+    return numStr === numStr.split('').reverse().join('');
+}
+
+// Function to accept numbers from the user and check if they are palindromes
+function checkPalindromes() {
+    let count = 0;
+    while (count < 3) {
+        let num = parseInt(prompt(`Enter number ${count + 1}:`));
+        if (isNaN(num)) {
+            console.log("Invalid input. Please enter a valid number.");
+            continue;
+        }
+        if (isPalindrome(num)) {
+            console.log(`${num} is a palindrome.`);
+        } else {
+            console.log(`${num} is not a palindrome.`);
+        }
+        count++;
+    }
+}
+
+// Call the function to start checking palindromes
+checkPalindromes();
+
+
+Q.40 Write a JavaScript Program to display the current day and time in the following format.
+Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+:::::Ans:::::
+function getCurrentDayAndTime() {
+    // Array of days
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    
+    // Get current date and time
+    const now = new Date();
+    const day = days[now.getDay()];
+    console.log(day,"Day")
+    // Get current time
+    let hours = now.getHours();
+    console.log(hours)
+    let ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Handle midnight (0 hours)
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    
+    // Format time
+    const timeString = hours + ' ' + ampm + ': ' + minutes + ' : ' + seconds;
+    
+    // Display
+    console.log('Today is ' + day + '. Current Time is ' + timeString);
+}
+
+// Call the function
+getCurrentDayAndTime(); 
+
+
+Q.41 Write a JavaScript program to get the current date?
+:Ans:
+function getCurrentDate() {
+    // Create a new Date object
+    const now = new Date();
+
+    // Extract individual components of the date
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1; // Months are zero-indexed, so we add 1
+    const day = now.getDate();
+
+    // Format the date as desired
+    const formattedDate = year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day;
+
+    // Return the formatted date
+    return formattedDate;
+}
+
+// Call the function and log the result
+console.log('Current date is:', getCurrentDate());
+
+Q.41 Write a JavaScript program to get the current date?
+function getCurrentDate() {
+   
+    const now = new Date();
+
+   
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1; 
+    const day = now.getDate();
+
+    
+    const formattedDate = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
+
+    return formattedDate;
+}
+
+// Call the function and log the result
+console.log('Current date is:', getCurrentDate());
+
+Q.42 Write a JavaScript program to compare two objects?
+:Ans:
+function compareObjects(obj1, obj2) {
+   
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+
+    if (keys1.length !== keys2.length) {
+        return false;
+    }
+
+   
+    for (let key of keys1) {
+        if (obj1[key] !== obj2[key]) {
+            return false;
+        }
+    }
+
+    
+    return true;
+}
+
+
+const obj1 = { name: 'John', age: 30 };
+const obj2 = { name: 'John', age: 20 };
+
+
+console.log(compareObjects(obj1, obj2));
+
+Q.43 Write a JavaScript program to convert an array of objects into CSV string?
+function convertArrayOfObjectsToCSV(data) {
+    const headers = Object.keys(data[0]);
+    const headerRow = headers.join(',');
+   
+    const rows = data.map(obj => {
+        return headers.map(header => obj[header]).join(',');
+    });
+    const csvString = headerRow + '\n' + rows.join('\n');
+
+    return csvString;
+}
+
+const data = [
+    { name: 'John', age: 30, city: 'New York' },
+    { name: 'Alice', age: 25, city: 'Los Angeles' },
+    { name: 'Bob', age: 35, city: 'Chicago' }
+];
+
+const csvString = convertArrayOfObjectsToCSV(data);
+
+console.log(csvString);
+
+Q.44 Write a JavaScript program to capitalize first letter of a string?
+:Ans:
+
+function capitalizeFirstLetter(str) {
+    
+    if (str === '') return '';
+
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+
+const string = 'hello world';
+const capitalizedString = capitalizeFirstLetter(string);
+
+console.log(capitalizedString);
+
+Q. 45 Write a JavaScript program to determine if a variable is array?
+function isArray(variable) {
+    return Array.isArray(variable);
+}
+
+// Example usage
+const arr = [1, 2, 3];
+const obj = { name: 'John' };
+
+console.log(isArray(arr)); // Output: true
+console.log(isArray(obj)); // Output: false
+
+Q.46 Write a JavaScript program to clone an array?
+function cloneArray(array) {
+    return [...array];
+}
+
+// Example usage
+const originalArray = [1, 2, 3];
+const clonedArray = cloneArray(originalArray);
+
+console.log(clonedArray);
+
+
+Q.47 What is the drawback of declaring methods directly in JavaScript objects?
+In JavaScript, declaring methods directly in objects (referred to as methods attached to object literals) is a common practice. While this approach is simple and straightforward, it has a few drawbacks:
+
+    Repetition of Function Definition: If you declare methods directly within object literals, each instance of the object will contain its own copy of the method. This results in unnecessary memory consumption when multiple instances of the object are created.
+
+    Inability to Share Methods: Objects created using the same constructor do not share methods. Each instance receives its own copy of the method. If you have many instances of the same object, this can lead to inefficient memory usage.
+
+    Limited Inheritance and Polymorphism: When you declare methods directly in an object, it becomes harder to implement inheritance and polymorphism. You cannot easily extend the functionality of these methods or override them in subclasses.
+
+    Difficulty in Testing and Maintenance: Methods declared directly within object literals are tightly coupled with the object itself. This can make unit testing and maintenance more challenging, as you may need to mock or modify these methods within the context of specific tests or requirements.
+
+ Q.48 Print the length of the string on the browser console using console.log()?
+ Ans:
+const myString = "Hello, World!";
+console.log(myString.length);
+
+Q.49 Change all the string characters to capital letters using toUpperCase() method?
+:Ans:
+const myString = "hello, world!";
+const capitalizedString = myString.toUpperCase();
+
+console.log(capitalizedString);
+
+Q.50 What is the drawback of declaring methods directly in JavaScript objects?
+Ans:
+    Code Reusability: If methods are declared directly in objects, they are not shared among instances. Each instance of the object will have its own copy of the method. This can lead to code duplication and increased memory usage, especially when multiple instances are created.
+
+    Inheritance: Objects created using the same constructor function do not share methods, making it challenging to implement inheritance. Inheritance allows objects to inherit properties and methods from a parent object, promoting code reuse and organizational clarity.
+
+    Maintenance: Methods declared directly within objects are tightly coupled with the object itself. If changes need to be made to a method, it may require modifying each instance of the object. This can lead to maintenance challenges and increase the likelihood of introducing bugs.
+
+    Testing: Testing methods declared directly in objects can be more challenging compared to methods defined separately. Since methods are tightly coupled with objects, unit testing may require testing the entire object's functionality rather than isolated methods.
+
+Q.51 Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy,
+mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?
+:Ans:
+function getCurrentDate(format) {
+    const now = new Date();
+    let day = now.getDate();
+    let month = now.getMonth() + 1;
+    const year = now.getFullYear();
+
+    // Pad single-digit day or month with leading zero
+    if (day < 10) {
+        day = '0' + day;
+    }
+    if (month < 10) {
+        month = '0' + month;
+    }
+
+    // Format the date based on the specified format
+    switch (format) {
+        case 'mm-dd-yyyy':
+            return month + '-' + day + '-' + year;
+        case 'mm/dd/yyyy':
+            return month + '/' + day + '/' + year;
+        case 'dd-mm-yyyy':
+            return day + '-' + month + '-' + year;
+        case 'dd/mm/yyyy':
+            return day + '/' + month + '/' + year;
+        default:
+            return 'Invalid format';
+    }
+}
+
+console.log('mm-dd-yyyy:', getCurrentDate('mm-dd-yyyy'));
+console.log('mm/dd/yyyy:', getCurrentDate('mm/dd/yyyy'));
+console.log('dd-mm-yyyy:', getCurrentDate('dd-mm-yyyy'));
+console.log('dd/mm/yyyy:', getCurrentDate('dd/mm/yyyy'));
+
+///
+Q.52 Use indexOf to determine the position of the first occurrence of a in 30 Days Of
+JavaScript?
+
+let str = "30 Days Of JavaScript";
+let position = str.indexOf('a');
+
+console.log("The position of the first occurrence of 'a' is: " + position);
+
+/// 
+Q,53 Use lastIndexOf to determine the position of the last occurrence of a in 30 Days Of
+JavaScript?
+let str = "30 Days Of JavaScript";
+let position = str.indexOf('a');
+
+console.log("The position of the first occurrence of 'a' is: " + position);
+
+Q.54What is  Form Validtion in JS?
+Ans::form validation works in JavaScript:
+Form validation in JavaScript refers to the process of ensuring that user input in HTML forms meets certain criteria or constraints before it is submitted to the server for processing. It's a crucial aspect of web development as it helps maintain data integrity, improve user experience, and prevent security vulnerabilities.
+
+Here's an overview of how form validation works in JavaScript:
+
+    1)User Input: When a user fills out a form on a web page and submits it, the browser sends the form data to the server for processing.
+
+    Validation Trigger: Before the form data is submitted, JavaScript code is used to validate the input provided by the user. This validation can be triggered when the user submits the form or when they interact with specific form fields (e.g., onBlur, onChange events).
+
+    2)Validation Rules: Validation rules define the criteria that the user input must meet. These rules can include requirements such as:
+        Presence of certain fields (e.g., required fields).
+        Format constraints (e.g., valid email address, numeric values, password strength).
+        Length limitations (e.g., minimum and maximum characters for a field).
+        Custom validation logic based on specific business requirements.
+
+    3)Error Handling: If the user input fails to meet the validation criteria, error messages are displayed to the user to indicate what went wrong and how to correct it. These messages can appear next to the corresponding form fields or in a centralized location on the page.
+
+   4) Preventing Submission: If there are validation errors, JavaScript prevents the form from being submitted to the server. This prevents the server from processing potentially invalid or malicious data.
+
+    5) Submission or Correction: Once the user corrects the errors in their input, they can resubmit the form. If all validation criteria are met, the form data is submitted to the server for further processing.
+
+
+Ques:55 Form in Email, number, Password, Validation?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation Example</title>
+</head>
+<body>
+
+<h2>Form Validation Example</h2>
+
+<form id="myForm" method="post">
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" class="form-control" required><br>
+  
+  <label for="phone">Phone Number:</label><br>
+  <input type="tel" id="phone" name="phone" class="form-control" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required><br>
+  
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" class="form-control" minlength="8" required><br>
+  
+  <input type="submit" value="Submit">
+</form>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        
+        // Email Validation
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+        
+        // Phone Number Validation
+        if (!validatePhoneNumber(phone)) {
+            alert("Please enter a valid 10-digit phone number");
+            return false;
+        }
+        
+        // Password Validation
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long");
+            return false;
+        }
+        
+        // If all validations pass, form submission can proceed
+        this.submit();
+    });
+});
+
+function validateEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function validatePhoneNumber(phone) {
+    var phoneRegex = /^[0-9]{10}$/;
+    return phoneRegex.test(phone);
+}
+
+</script>
+</body>
+</html>
+
+Q.56 Dynamic Form Validation in JS?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Form Validation Example</title>
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<h2>Dynamic Form Validation Example</h2>
+
+<form id="myForm" method="post">
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" class="form-control"><br>
+  <span id="emailError" class="error"></span><br>
+  
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" class="form-control"><br>
+  <span id="passwordError" class="error"></span><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+// make script.js File //
+document.addEventListener("DOMContentLoaded", function() {
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    emailInput.addEventListener("input", function() {
+        validateEmail(this.value);
+    });
+
+    passwordInput.addEventListener("input", function() {
+        validatePassword(this.value);
+    });
+
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        if (!validateEmail(emailInput.value)) {
+            return false;
+        }
+
+        if (!validatePassword(passwordInput.value)) {
+            return false;
+        }
+
+        // If all validations pass, form submission can proceed
+        this.submit();
+    });
+});
+
+function validateEmail(email) {
+    const emailError = document.getElementById("emailError");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        emailError.textContent = "Please enter a valid email address";
+        return false;
+    } else {
+        emailError.textContent = "";
+        return true;
+    }
+}
+
+function validatePassword(password) {
+    const passwordError = document.getElementById("passwordError");
+
+    if (password.length < 8) {
+        passwordError.textContent = "Password must be at least 8 characters long";
+        return false;
+    } else {
+        passwordError.textContent = "";
+        return true;
+    }
+}
+
+Q.57 how many type of JS Event? How to use it ?
+
+Ans::1)Mouse Events:
+These events are triggered by user interactions with the mouse,
+    click: Fired when the user clicks on an element.
+    dblclick: Fired when the user double-clicks on an element.
+    mousedown: Fired when the user presses a mouse button over an element.
+    mouseup: Fired when the user releases a mouse button over an element.
+    mousemove: Fired when the user moves the mouse pointer over an element.
+    mouseover: Fired when the mouse pointer enters the bounds of an element.
+    mouseout: Fired when the mouse pointer leaves the bounds of an element.
+    mouseenter: Similar to mouseover, but does not bubble up.
+    mouseleave: Similar to mouseout, but does not bubble up.
+    contextmenu: Fired when the user right-clicks on an element to open the context menu.
+:::Example:::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events Example</title>
+<style>
+  #box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 50px auto;
+  }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var box = document.getElementById("box");
+
+    box.addEventListener("click", function() {
+        console.log("click event fired");
+        this.style.backgroundColor = "red";
+    });
+
+    box.addEventListener("mouseover", function() {
+        console.log("mouseover event fired");
+        this.style.backgroundColor = "green";
+    });
+
+    box.addEventListener("mouseout", function() {
+        console.log("mouseout event fired");
+        this.style.backgroundColor = "blue";
+    });
+
+    box.addEventListener("contextmenu", function(event) {
+        console.log("contextmenu event fired");
+        event.preventDefault(); // Prevent default context menu
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="box"></div>
+
+</body>
+</html>
+
+2)All Keyboard Events
+keydown: Fired when a key is pressed down.
+keyup: Fired when a key is released.
+keypress: Fired when a key is pressed down and then released.
+input: Fired when the value of an input field changes.
+
+:::Example:::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Events Example</title>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var inputField = document.getElementById("inputField");
+
+    inputField.addEventListener("keydown", function(event) {
+        console.log("Keydown event fired - Key: " + event.key);
+    });
+
+    inputField.addEventListener("keyup", function(event) {
+        console.log("Keyup event fired - Key: " + event.key);
+    });
+
+    inputField.addEventListener("keypress", function(event) {
+        console.log("Keypress event fired - Key: " + event.key);
+    });
+
+    inputField.addEventListener("input", function(event) {
+        console.log("Input event fired - Value: " + this.value);
+    });
+});
+</script>
+</head>
+<body>
+
+<input type="text" id="inputField" placeholder="Type here">
+
+</body>
+</html>
+3)All Form Events in js:-
+    submit: Fired when a form is submitted.
+    reset: Fired when a form is reset.
+    change: Fired when the value of a form element changes.
+    input: Fired when the value of an input field changes (includes all input types).
+    focus: Fired when an element receives focus.
+    blur: Fired when an element loses focus.
+    select: Fired when text is selected within a text input or textarea.
+    invalid: Fired when a form element is invalid (e.g., after form validation).
+    keydown, keyup, keypress: Keyboard events, which can also be useful in form interactions.
+    click: Commonly used with checkboxes and radio buttons, but also applicable to form buttons.
+:::Example:::
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Events Example</title>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("myForm");
+    var inputField = document.getElementById("inputField");
+    var selectField = document.getElementById("selectField");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        console.log("Form submitted");
+    });
+
+    inputField.addEventListener("change", function() {
+        console.log("Input field value changed: " + this.value);
+    });
+
+    selectField.addEventListener("change", function() {
+        console.log("Select field value changed: " + this.value);
+    });
+});
+</script>
+</head>
+<body>
+<form id="myForm">
+    <label for="inputField">Input Field:</label>
+    <input type="text" id="inputField"><br>
+    
+    <label for="selectField">Select Field:</label>
+    <select id="selectField">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select><br>    
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+4)All Document/Window Events:
+
+    DOMContentLoaded: Fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+    load: Fired when the entire page (including all frames, objects, and images) has finished loading.
+    resize: Fired when the browser window is resized.
+    scroll: Fired when the user scrolls the page.
+    unload: Fired when the document or window is being unloaded (e.g., when navigating away from the page).
+    beforeunload: Fired before the document or window is being unloaded, allowing the page to prompt the user to confirm leaving the page.
+    hashchange: Fired when the fragment identifier (hash) of the URL changes.
+    focus: Fired when an element gains focus.
+    blur: Fired when an element loses focus.
+    online: Fired when the browser detects that the user has come online (connected to the internet).
+    offline: Fired when the browser detects that the user has gone offline (disconnected from the internet).
+    error: Fired when an error occurs during the loading of an external resource (e.g., script, image).
+
+:::Example:::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document/Window Events Example</title>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOMContentLoaded event fired");
+});
+
+window.addEventListener("load", function() {
+    console.log("Load event fired");
+});
+
+window.addEventListener("resize", function() {
+    console.log("Window resized");
+});
+
+window.addEventListener("scroll", function() {
+    console.log("Page scrolled");
+});
+
+window.addEventListener("beforeunload", function(event) {
+    event.preventDefault();
+    event.returnValue = "";
+    console.log("Beforeunload event fired");
+});
+</script>
+</head>
+<body>
+
+<p>Scroll down or resize the window to trigger events.</p>
+
+</body>
+</html>
+
+5)Touch Events in js  
+   touchstart: Fired when a finger touches the screen.
+    touchmove: Fired when a finger moves across the screen.
+    touchend: Fired when a finger is lifted off the screen.
+    touchcancel: Fired when a touch event is canceled, typically due to the touch point leaving the document window.
+
+:::Example:::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Touch Events Example</title>
+<style>
+  #touchArea {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 50px auto;
+    touch-action: none; /* Disable default touch behavior */
+  }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var touchArea = document.getElementById("touchArea");
+
+    touchArea.addEventListener("touchstart", function(event) {
+        event.preventDefault(); // Prevent default touch behavior
+        console.log("Touchstart event fired");
+    });
+
+    touchArea.addEventListener("touchmove", function(event) {
+        event.preventDefault(); // Prevent default touch behavior
+        console.log("Touchmove event fired");
+    });
+
+    touchArea.addEventListener("touchend", function(event) {
+        event.preventDefault(); // Prevent default touch behavior
+        console.log("Touchend event fired");
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="touchArea"></div>
+
+</body>
+</html>
+
+Q.59 What is Bom vs Dom in JS?
+::Ans::
+
+    DOM (Document Object Model):
+        The DOM represents the document as a hierarchical tree structure, where each node in the tree corresponds to an element, attribute, or piece of text in the document.
+        It provides a structured representation of the document's contents, allowing JavaScript to interact with and manipulate the document dynamically.
+        With the DOM, you can access and modify elements, attributes, and text content, create new elements, append or remove elements from the document, and handle events triggered by user interactions.
+        The DOM is standardized by the World Wide Web Consortium (W3C) and is accessible through the document object in JavaScript.
+
+    BOM (Browser Object Model):
+        The BOM represents everything else in the browser environment beyond the document itself, including the browser window, history, location, and navigator objects.
+        It provides JavaScript with methods and properties to interact with the browser window and control aspects such as window size, position, navigation, and user agent information.
+        Unlike the DOM, the BOM is not standardized, and its features can vary across different browsers.
+        Common components of the BOM include the window object (representing the browser window), the location object (representing the URL of the document), the history object (representing the browser's navigation history), and the navigator object (representing information about the browser and the device).
+
+Q.60 Array vs object defences in JS?
+
+ arrays and objects are two fundamental data structures used to store and manipulate data.
+
+Arrays:
+        Arrays are ordered collections of values, where each value is identified by its numeric index.
+        Elements in an array can be of any data type, including other arrays, objects, or even functions.
+        Arrays are ideal for storing lists of items or sequences of values that need to be accessed or manipulated sequentially.
+        Common array operations include adding or removing elements, accessing elements by index, iterating over elements, and performing array-specific methods such as map, filter, reduce, etc.
+        Arrays are created using array literal syntax [] or the Array() constructor.
+
+const fruits = ['apple', 'banana', 'orange'];
+console.log(fruits[0]); // Output: 'apple'
+
+Objects:
+
+    Objects are unordered collections of key-value pairs, where each key is a string (or symbol in ES6+) and each value can be of any data type, including arrays, objects, or functions.
+    Objects are commonly used to represent complex data structures and organize related data into a single entity.
+    Each key in an object acts as a unique identifier for its corresponding value, allowing for efficient lookup and retrieval of data.
+    Object properties can be added, updated, or removed dynamically, making them versatile for representing dynamic data structures.
+    Objects are created using object literal syntax {} or the Object() constructor.
+::Example::
+const person = {
+    name: 'John',
+    age: 30,
+    address: {
+        city: 'New York',
+        country: 'USA'
+    }
+};
+console.log(person.name);
+
+Q.61 Split the string into an array using split() Method?
+
+The split() method in JavaScript is used to split a string into an array of substrings based on a specified separator.
+
+// Example //
+var str = "Hello,World,JavaScript";
+var arr = str.split(',');
+console.log(arr);
+
+
+//62//
+Q.62 Check if the string contains a word Script using includes() method?
+The includes() method returns true if the specified substring is found within the string, and false otherwise. It is case-sensitive, so "Script" and "script" would be considered different.
+
+
+Q.63 Change all the string characters to lowercase letters using toLowerCase() Method.
+::Ans::
+var str = "HELLO World";
+var lowercaseStr = str.toLowerCase();
+console.log(lowercaseStr);
+
+Q.64 What is Character at index 15 in ’30 Days of JavaScript’ string? Use charAt() method.
+::Ans::
+var str = '30 Days of JavaScript';
+var charAtIndex15 = str.charAt(15);
+
+console.log(charAtIndex15);
+
+Q.65 copy to one string to another string in JS?
+:Ans:
+let originalString = "Hello, world!";
+let copiedString = originalString.slice(); 
+console.log(copiedString);
+
+Q.66 Find the length of a string without using libraryFunction?
+:Ans:
+function findStringLength(str) {
+    let length = 0;
+    while (str[length] !== undefined) {
+        length++;
+    }
+    return length;
+}
+
+let myString = "Hello, world!";
+let lengthOfString = findStringLength(myString);
