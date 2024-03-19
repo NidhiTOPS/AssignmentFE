@@ -1,0 +1,156 @@
+What is jQuery?
+Ans:-jQuery is a lightweight, "write less, do more", JavaScript library.
+
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+
+jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+
+jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+The jQuery library contains the following features:
+
+HTML/DOM manipulation
+CSS manipulation
+HTML event methods
+Effects and animations
+AJAX
+Utilities
+
+Ques:How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+Jquery, JQuery Animation?
+:Ans:
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").removeClass("blue");
+  });
+});
+</script>
+<style>
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1 class="blue">Heading 1</h1>
+<h2 class="blue">Heading 2</h2>
+
+<p class="blue">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Remove class from elements</button>
+
+</body>
+</html>
+
+Ques:How to create slider with animation?
+::Ans::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Slider with Animation</title>
+<style>
+.slider {
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 400px;
+  height: 200px;
+  display: none;
+  position: absolute;
+}
+
+.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slide active">Slide 1</div>
+  <div class="slide">Slide 2</div>
+  <div class="slide">Slide 3</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  var slides = $('.slide');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide, 2000);
+
+  function nextSlide() {
+    slides.eq(currentSlide).fadeOut(1000);
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides.eq(currentSlide).fadeIn(1000);
+  }
+});
+</script>
+
+</body>
+</html>
+
+
+::Ques::Event bubbling tickling example?
+:Ans:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Bubbling Example</title>
+<style>
+  .outer {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    padding: 20px;
+  }
+  .inner {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="outer">
+  <div class="inner">
+    Click Me!
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var outer = document.querySelector('.outer');
+  var inner = document.querySelector('.inner');
+
+  outer.addEventListener('click', function(event) {
+    console.log('Outer div clicked!');
+  });
+
+  inner.addEventListener('click', function(event) {
+    console.log('Inner div clicked!');
+    event.stopPropagation(); // Stop event bubbling
+  });
+});
+</script>
+
+</body>
+</html>
+

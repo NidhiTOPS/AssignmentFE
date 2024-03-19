@@ -1413,3 +1413,25 @@ function findStringLength(str) {
 
 let myString = "Hello, world!";
 let lengthOfString = findStringLength(myString);
+
+Q67:Create password field with show hide functionalities?
+::Ans::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Field with Show/Hide</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="password-container">
+  <input type="password" id="passwordInput" placeholder="Enter password">
+  <button id="togglePasswordBtn">Show</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
