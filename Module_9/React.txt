@@ -1,4 +1,4 @@
-Ques:What is React Js?
+Ques:1:What is React Js?
 
 Ans::
 React.js, commonly referred to as React, is an open-source JavaScript library developed by Facebook for building user interfaces (UIs) and single-page applications (SPAs). It is maintained by Facebook along with a community of developers and is widely used by companies including Facebook, Instagram, Airbnb, and many others.
@@ -19,7 +19,7 @@ Key features and concepts of React.js include:
 
     React Router: React.js can be paired with React Router, a popular routing library for declaratively defining navigation and handling routing in single-page applications.
 
-Ques:What is NPM in React Js?
+Ques:2:What is NPM in React Js?
 Ans::
 In React.js (and in general for JavaScript development), NPM stands for Node Package Manager. It is a package manager for JavaScript that allows developers to discover, install, and manage packages and dependencies for their projects. NPM is widely used in the JavaScript ecosystem and is an essential tool for building modern web applications, including those built with React.js.
 
@@ -35,7 +35,7 @@ Here are some key aspects of NPM in the context of React.js development:
 
     Versioning and Publishing: NPM facilitates versioning and publishing of packages to the NPM registry. Developers can publish their own packages to the registry for others to discover and use in their projects. NPM also provides tools for managing version numbers, publishing updates, and managing access permissions for packages.
 
-Ques::What is Role of Node Js in react Js?
+Ques:3::What is Role of Node Js in react Js?
 Ans::
 Node.js plays several roles in React.js development, primarily in the context of building and running React applications. Here are some key roles that Node.js plays in React.js development:
 
@@ -48,7 +48,7 @@ Node.js plays several roles in React.js development, primarily in the context of
     Middleware and APIs: Node.js can be used to implement server-side logic, middleware, and APIs for React applications. Developers can use frameworks like Express.js, Nest.js, or Fastify to build server-side APIs that interact with databases, handle authentication, and serve dynamic content to React clients. Node.js provides a scalable and efficient platform for building backend services that integrate seamlessly with React frontend applications.
 
     Deployment: Node.js is often used for deploying React applications to production environments. Many hosting platforms and cloud providers support Node.js, allowing developers to deploy React applications as server-side applications or static sites. Node.js provides a consistent runtime environment across different deployment environments, making it easier to deploy and manage React applications at scale.
-Ques:What is CLI command In React Js?
+Ques:4:What is CLI command In React Js?
 ::Ans::
 In React.js, CLI stands for Command Line Interface. The CLI commands are tools provided by React.js frameworks or development environments to streamline the development process, automate common tasks, and facilitate project management. Here are some common CLI commands used in React.js development:
 
@@ -62,7 +62,7 @@ npm test / yarn test: These commands run tests for your React.js project. By def
 
 npm eject / yarn eject: This command is used to "eject" from Create React App, exposing the project's configuration files and dependencies. Ejecting allows you to customize your project's configuration, such as webpack, Babel, and ESLint configurations, but it also means you'll need to manage these configurations manually going forward.
 
-::Ques::What is Components in React Js?
+::Ques:5::What is Components in React Js?
 Ans::
 There are two main types of components in React.js:
 
@@ -95,3 +95,205 @@ jsx
     export default Welcome;
 
 Both functional and class components can accept input data through props and can maintain their own internal state using React's state mechanism. They can also compose together to form larger UI structures, with each component responsible for a specific part of the UI.
+
+Ques:6:What is Header and Content Components in React Js?
+:Ans:
+Header Component: The header component typically contains elements such as the website's logo, navigation menu, and any other elements that are meant to be displayed at the top of the page. It is a reusable component that can be included in multiple pages of a web application.
+code:
+import React from 'react';
+
+const Header = () => {
+  return (
+    <header>
+      <div className="logo">Logo</div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
+
+Ques:How to install React Js on Windows, Linux Operating System? How to Install
+NPM and How to check version of NPM?
+Ans:
+    Install Create React App globally: npm install -g create-react-app
+    Create a new React.js project: npx create-react-app my-react-app
+    Navigate into the project directory: cd my-react-app
+    Start the development server: npm start
+    Check npm version: npm --version
+Ques::How to check version of React Js?
+Ans:Using npm:
+Using npm:
+If you're using npm, you can run the following command in your terminal or command prompt within your React project directory:
+
+bash
+
+npm list react
+
+This command will display the version of React.js installed in your project, along with its dependencies.
+bash
+
+npm list react
+
+This command will display the version of React.js installed in your project, along with its dependencies.
+
+Ques::How to change in components of React Js?
+Ans:
+To change components in React.js, you typically modify the JSX code within your component files. Here's a general outline of how you can change components in a React.js project:
+
+    Identify the Component to Modify: Determine which component(s) you want to change. This could be a functional component or a class component.
+
+    Locate the Component File: Find the file containing the component you want to change. In a typical React.js project created using Create React App, components are often stored in the src/components directory.
+
+    Make Changes to the JSX Code: Open the component file using a text editor or an integrated development environment (IDE). Then, make the desired changes to the JSX code within the component's return statement. This could involve adding, removing, or modifying JSX elements, applying CSS styles, or updating component logic.
+
+    Save the File: Save the changes you made to the component file.
+
+    View Changes in the Browser: If you have the development server running (npm start or yarn start), your changes should be automatically reflected in the browser. If not, start the development server to see the updated component in action.
+
+Here's an example of a simple functional component in React.js and how you might change it:
+// OriginalComponent.js
+import React from 'react';
+
+const OriginalComponent = () => {
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+      <p>This is a simple React component.</p>
+    </div>
+  );
+};
+
+export default OriginalComponent;
+
+// 
+import React from 'react';
+
+const ModifiedComponent = () => {
+  return (
+    <div>
+      <h1>Hello, React!</h1> {/* Changed text here */}
+      <p>This is a simple React component.</p>
+    </div>
+  );
+};
+
+export default ModifiedComponent;
+
+Ques:How to Create a List View in React Js?
+:Ans:
+Creating a list view in React.js involves rendering a list of items dynamically using JavaScript. Here's a step-by-step guide on how to create a simple list view in React.js:
+
+    Set up your React project:
+    If you haven't already set up a React project, you can create one using Create React App or any other method you prefer.
+
+    Create a component for the list view:
+    Create a new component file, for example ListView.js, where you'll define your list view component.
+
+    Define the list view component:
+    Inside ListView.js, define your list view component. This component will render a list of items.
+
+    Pass data to the list view component:
+    Pass the data (array of items) that you want to display in the list view as props to the list view component.
+
+    Render the list of items:
+    Inside the list view component, use JavaScript (JSX) to map over the array of items and render each item as a list item (<li>).
+
+Here's an example implementation of a simple list view component in React.js:
+
+jsx
+
+// ListView.js
+import React from 'react';
+
+const ListView = ({ items }) => {
+  return (
+    <div>
+      <h2>List View</h2>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ListView;
+
+In this example, the ListView component takes a prop named items, which should be an array of strings. Inside the component, we use the map function to iterate over each item in the items array and render it as an <li> element. The key prop is important for React to efficiently update the list when items are added, removed, or reordered.
+
+Now, you can use this ListView component in your main application component or any other component where you want to display the list view. Pass the array of items as a prop to the ListView component:
+
+jsx
+
+// App.js
+import React from 'react';
+import ListView from './ListView';
+
+const App = () => {
+  const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+
+  return (
+    <div>
+      <h1>My React App</h1>
+      <ListView items={items} />
+    </div>
+  );
+};
+
+export default App;
+
+With this setup, when you render App, it will display the list view with the provided items. You can easily modify the items array or customize the appearance of the list view by updating the JSX in the ListView component.
+
+Ques:Create Increment decrement state change by button click?
+:Ans::
+import React, { useState } from 'react';
+
+const Counter = () => {
+  // Define state for the counter
+  const [count, setCount] = useState(0);
+
+  // Function to handle incrementing the counter
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  // Function to handle decrementing the counter
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <h2>Counter: {count}</h2>
+      {/* Button to increment the counter */}
+      <button onClick={increment}>Increment</button>
+      {/* Button to decrement the counter */}
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+};
+
+export default Counter;
+
+//
+import React from 'react';
+import Counter from './Counter';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Counter App</h1>
+      <Counter />
+    </div>
+  );
+};
+
+export default App;

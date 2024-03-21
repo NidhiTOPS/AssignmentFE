@@ -1,0 +1,81 @@
+:Ques:Explain Life cycle in Class Component and functional component with Hooks?
+Ans:Lifecycle in Class Components:
+
+In class components, the lifecycle can be divided into three main phases: mounting, updating, and unmounting. Here's a brief explanation of each phase:
+
+    Mounting:
+        constructor(): This method is called when an instance of the component is being created. It's used for initializing state and binding event handlers.
+        render(): This method is responsible for rendering the component UI. It should be a pure function of props and state.
+        componentDidMount(): This method is invoked immediately after a component is mounted. It's a good place to perform initializations that require DOM nodes or data fetching operations.
+
+    Updating:
+        shouldComponentUpdate(nextProps, nextState): This method is invoked before rendering when new props or state are being received. It allows you to control whether the component should re-render or not by returning a boolean value.
+        render(): Same as in the mounting phase.
+        componentDidUpdate(prevProps, prevState): This method is called immediately after updating occurs. It's useful for performing DOM operations or data fetching based on changes to props or state.
+
+    Unmounting:
+        componentWillUnmount(): This method is invoked immediately before a component is unmounted and destroyed. It's where you should perform cleanup tasks such as cancelling network requests or removing event listeners.
+
+Lifecycle in Functional Components with Hooks:
+
+Functional components with hooks provide a more streamlined way to manage component lifecycle. Here are the equivalents of the lifecycle methods using hooks:
+
+    Mounting:
+        useState(): This hook allows functional components to manage state. You can initialize state variables with the useState() hook.
+        useEffect(() => {}, []): This hook combines componentDidMount, componentDidUpdate, and componentWillUnmount into a single function. The first argument is a function that represents the effect, and the second argument is an array of dependencies. If the dependencies array is empty, the effect runs only once after the initial render (equivalent to componentDidMount).
+
+    Updating:
+        useState(): Same as in the mounting phase.
+        useEffect(() => {}): You can use the useEffect hook without the second argument to run the effect after every render. This is equivalent to componentDidUpdate in class components.
+
+    Unmounting:
+        useEffect(() => { return () => {} }, []): You can return a cleanup function from the useEffect hook to perform cleanup tasks. This function will run when the component is unmounted, similar to componentWillUnmount.
+
+Here's an example demonstrating the usage of lifecycle methods in both class and functional components:
+
+jsx
+
+// Class Component
+class MyClassComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  componentDidMount() {
+    console.log("Component mounted");
+  }
+
+  componentDidUpdate() {
+    console.log("Component updated");
+  }
+
+  componentWillUnmount() {
+    console.log("Component will unmount");
+  }
+
+  render() {
+    return <div>{this.state.count}</div>;
+  }
+}
+
+// Functional Component with Hooks
+import React, { useState, useEffect } from "react";
+
+function MyFunctionalComponent() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Component mounted");
+
+    return () => {
+      console.log("Component will unmount");
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("Component updated");
+  });
+
+  return <div>{count}</div>;
+}
