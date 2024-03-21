@@ -1,0 +1,96 @@
+Ques:What is Redux?
+Ans:
+Redux is a predictable state container for JavaScript apps, most commonly used with libraries like React or Angular for building user interfaces. It provides a centralized store for managing the state of an application, making it easier to manage and update state across various components. Redux follows the principles of unidirectional data flow, where the state of an application is kept in a single store, and changes are made through dispatching actions.
+
+Key concepts of Redux include:
+
+    Store: The store holds the state of the application. It allows access to the state via getState(), allows state to be updated via dispatch(action), and registers listeners via subscribe(listener).
+
+    Action: Actions are plain JavaScript objects that represent events that occur in the application. They contain a type field that describes the type of action being performed. Actions are dispatched to the store and are the only source of information for the store.
+
+    Reducer: Reducers specify how the application's state changes in response to actions sent to the store. They are pure functions that take the current state and an action, and return a new state.
+
+    Dispatch: Dispatching an action is the process of sending an action object to the Redux store. It's typically done using the store.dispatch(action) method.
+
+    Middleware: Middleware provides a third-party extension point between dispatching an action and the moment it reaches the reducer. It is commonly used for logging, crash reporting, asynchronous actions, etc.
+
+    Selectors: Selectors are functions used to extract specific pieces of data from the Redux store state. They can encapsulate complex state access logic and are commonly used with libraries like Reselect for performance optimization.
+
+Redux is known for its simplicity, predictability, and scalability, making it popular among developers for managing complex state in large-scale applications.
+
+Ques:What is Redux Thunk used for?
+Ans:
+Redux Thunk is a middleware for Redux that allows you to write action creators that return a function instead of an action object. This function can perform asynchronous operations, such as making API requests, and dispatch actions based on the results of those operations.
+
+Here's how Redux Thunk works:
+
+    Action Creators: Instead of returning an action object directly, action creators can return a function. This function receives the dispatch and getState functions as arguments, which allows it to dispatch actions and access the current state of the Redux store.
+
+    Asynchronous Operations: Within the function returned by the action creator, you can perform any asynchronous operations, such as making HTTP requests using libraries like Axios or Fetch.
+
+    Dispatching Actions: After the asynchronous operation completes, you can dispatch regular Redux actions based on the result. For example, you can dispatch a success action if the operation was successful, or a failure action if there was an error.
+
+Redux Thunk is commonly used for managing asynchronous logic in Redux applications, such as fetching data from an API, handling user authentication, or performing other side effects. It provides a convenient way to encapsulate asynchronous behavior within Redux action creators while still maintaining the purity and predictability of the Redux architecture.
+
+Ques:What is Pure Component? When to use Pure Component over Component?
+Ans:
+In React, a PureComponent is a base class similar to React's regular Component class, but with a built-in shouldComponentUpdate() method implementation. This method performs a shallow comparison of the component's props and state objects to determine if the component should re-render. If the props and state remain the same, React will prevent unnecessary re-renders, improving performance by avoiding unnecessary updates to the DOM.
+
+The key difference between PureComponent and Component lies in the default behavior of the shouldComponentUpdate() method:
+
+    Component: In a regular Component, the shouldComponentUpdate() method always returns true, meaning the component will re-render whenever its props or state change, regardless of whether the actual data has changed.
+
+    PureComponent: In a PureComponent, the shouldComponentUpdate() method performs a shallow comparison of the current props and state with the next props and state. If the shallow comparison indicates that they are equal, the component will not re-render, thus preventing unnecessary rendering.
+
+When to use PureComponent over Component:
+
+    Performance Optimization: Use PureComponent when you want to optimize performance by preventing unnecessary re-renders. If a component's render output is the same given the same props and state, using PureComponent can avoid re-renders and improve the overall performance of your application.
+
+    Pure Data Components: If a component's rendering depends only on its props and state and does not depend on any other external factors, such as global state or context changes, you can use PureComponent to ensure that it only re-renders when necessary.
+
+    Avoiding Unnecessary Work: PureComponent is particularly useful when dealing with large lists or deeply nested component trees. By using PureComponent, you can avoid re-rendering entire subtrees of components when the data they depend on hasn't changed.
+
+However, it's important to note that PureComponent performs a shallow comparison of props and state, so it may not be suitable for all scenarios, especially when dealing with complex data structures or nested objects where a shallow comparison may not accurately determine if the data has changed. In such cases, using Component with a custom shouldComponentUpdate() implementation may be more appropriate.
+
+Ques:What is the second argument that can optionally be passed tosetState and what is
+its purpose?
+:Ans:
+In React, the setState() method can optionally accept a second argument, which is a callback function. This callback function is commonly referred to as the "callback function" or "callback parameter".
+
+The purpose of this callback function is to execute code after the setState() operation has been completed and the component has been re-rendered. Since setState() is asynchronous, React does not guarantee that state updates will be applied immediately after calling setState(). Instead, React batches multiple setState() calls and performs the updates asynchronously for performance reasons.
+
+By passing a callback function as the second argument to setState(), you can ensure that certain code runs only after the state has been updated and the component has been re-rendered. This can be useful for performing actions that depend on the updated state, such as making additional calculations, triggering side effects, or interacting with the updated DOM.
+
+Here's an example of using the callback function with setState():
+this.setState({ 
+  counter: this.state.counter + 1 
+}, () => {
+  // Code inside this callback will run after the state has been updated
+  console.log('State updated:', this.state.counter);
+});
+
+:Ques:What is the second argument that can optionally be passed tosetState and what is
+its purpose?
+:Ans:
+
+In React, the second argument that can optionally be passed to setState is a callback function. This callback function is invoked after the state has been updated, and it is typically used to perform actions that depend on the updated state.
+
+Here's an example of how setState can be used with a callback function:
+
+jsx
+
+this.setState({ count: this.state.count + 1 }, () => {
+  console.log('State updated:', this.state.count);
+});
+
+In this example, setState is used to increment the count state by 1, and the callback function logs the updated state value to the console after the state has been updated. This is useful for performing tasks that need to be done after the state has been updated, such as updating the UI or triggering side effects.
+
+Ques:Create a Table and Search data from table using React Js?
+Ans: in React app that we have in Src Search Data component
+
+Ques:Create Login registration with CRUD Application using API (Redux)?
+:Ans:
+
+
+
+
